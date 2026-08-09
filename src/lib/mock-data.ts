@@ -8,6 +8,7 @@ export const student = {
 
 export const challengeProgress = { currentDay: 12, totalDays: 60, completedDays: 11 };
 export const currentStreak = { days: 11, best: 11, status: "active" as const };
+export type MockScenario = "active" | "first-day" | "missed-day" | "empty-profile";
 
 export const dailyChallenges = [
   { day: 10, title: "Ship a responsive portfolio", status: "complete" as const },
