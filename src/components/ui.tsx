@@ -30,7 +30,7 @@ export function Badge({ children, tone = "default" }: { children: ReactNode; ton
 }
 
 export function Card({ children, className = "", elevated = false }: { children: ReactNode; className?: string; elevated?: boolean }) {
-  return <section className={`border border-line bg-ink ${elevated ? "shadow-surface" : ""} ${className}`}>{children}</section>;
+  return <section className={`border border-line bg-ink ${elevated ? "shadow-[0_1px_0_rgb(255_255_255_/_0.035%)_inset,0_12px_30px_rgb(0_0_0_/_0.14)]" : ""} ${className}`}>{children}</section>;
 }
 
 export function ProgressBar({ value, max = 60, label }: { value: number; max?: number; label?: string }) {
