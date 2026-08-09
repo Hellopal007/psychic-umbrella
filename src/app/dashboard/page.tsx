@@ -1,26 +1,18 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowUpRight, Check, Github, Linkedin, Timer, UserRound } from "lucide-react";
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 import { AppShell } from "@/components/app-shell";
 import { Badge, Card, ChallengeDayIndicator, ProgressBar, SectionLabel, StatusIndicator, Telemetry } from "@/components/ui";
 import { achievements, challengeProgress, githubProof, linkedinProof, type MockScenario } from "@/lib/mock-data";
 
 const proofDays = [9, 10, 11, 12, 13, 14];
 
-function getScenario(value: string | null): MockScenario {
+function getScenario(value: string | undefined): MockScenario {
   return value === "first-day" || value === "missed-day" || value === "empty-profile" ? value : "active";
 }
 
-export default function DashboardPage() {
-  return <Suspense fallback={<AppShell><div className="page"><p className="telemetry">Loading command center…</p></div></AppShell>}><DashboardContent /></Suspense>;
-}
-
-function DashboardContent() {
-  const searchParams = useSearchParams();
-  const scenario = getScenario(searchParams.get("scenario"));
+export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ scenario?: string }> }) {
+  const { scenario: scenarioValue } = await searchParams;
+  const scenario = getScenario(scenarioValue);
   const isFirstDay = scenario === "first-day";
   const isMissed = scenario === "missed-day";
   const isEmptyProfile = scenario === "empty-profile";
