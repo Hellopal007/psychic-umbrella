@@ -1,5 +1,12 @@
 # AI Usage Log
 
+
+This document records the AI-assisted development process used during the
+ABTalks hackathon submission.
+
+The prompts below are the actual prompts used during development. Each session
+corresponds to a development milestone and the resulting Git commit.
+
 ## Session 1 — Project Foundation
 Goal:
 Initialize the ABTalks redesign and establish the component architecture.
