@@ -16,11 +16,11 @@ export const dailyChallenges = [
   { day: 13, title: "Make a data visualisation", status: "locked" as const },
 ];
 
-export const githubProof = { repository: "aaravmehta/command-menu", commits: 3, lastCommit: "2h ago", verified: true };
-export const linkedinProof = { postUrl: "linkedin.com/posts/aaravmehta", postedAt: "Yesterday", verified: true };
+export const githubProof = { repository: "arjunmehta/rest-api", commits: 11, lastCommit: "2h ago", verified: true };
+export const linkedinProof = { postUrl: "linkedin.com/posts/arjunmehta", posts: 10, postedAt: "Yesterday", verified: true };
 
 export const achievements = [
-  { name: "First push", unlocked: true },
-  { name: "7-day run", unlocked: true },
-  { name: "Halfway there", unlocked: false },
+  { name: "First commit", unlocked: true },
+  { name: "7 day streak", unlocked: true },
+  { name: "10 public builds", unlocked: true },
 ];
